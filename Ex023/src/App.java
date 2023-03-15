@@ -6,7 +6,7 @@ public class App {
     public static void main(String[] args) throws Exception {
         try (Scanner leitor = new Scanner(System.in)) {
             int entrada;
-            char condicao = 's';
+            char condicao;
 
             do {
                 System.out.print("\nDigite um número inteiro: ");
