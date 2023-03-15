@@ -26,7 +26,7 @@ public class App {
 
                 Pessoa milico = new Pessoa(nome, sexo, idade, saude);
 
-                if (verificarAptidao(milico)) {
+                if (milico.verificarAptidao()) {
                     System.out.println("");
                     System.out.println("Parabéns, " + milico.getNome() + "! Você está apto à roçar mato.");
                     aptos++;
@@ -34,19 +34,15 @@ public class App {
                 } else {
                     if (milico.getIdade() < 18 && !milico.getSaude()) {
                         System.out.println("");
-                        System.out.println(
-                                "Desculpa, " + milico.getNome() + "! Você além de ser muito novo, não tem saúde.");
+                        System.out.println("Desculpa, " + milico.getNome() + "! Você além de ser muito novo, não tem saúde.");
 
                     } else if (milico.getIdade() < 18 && milico.getSaude()) {
                         System.out.println("");
-                        System.out.println(
-                                "Desculpa, " + milico.getNome() + "! Você é muito novo para pintar meio-fio.");
+                        System.out.println("Desculpa, " + milico.getNome() + "! Você é muito novo para pintar meio-fio.");
 
                     } else {
                         System.out.println("");
-                        System.out.println(
-                                "Desculpa, " + milico.getNome()
-                                        + "! Você não tem saúde para matar mosquito da dengue.");
+                        System.out.println("Desculpa, " + milico.getNome() + "! Você não tem saúde para matar mosquito da dengue.");
                     }
                     inaptos++;
                 }
@@ -65,17 +61,6 @@ public class App {
             } while (condicao == 's' || condicao == 'S');
 
             scan.close();
-        }
-    }
-
-    public static boolean verificarAptidao(Pessoa pessoa) {
-        int idade = pessoa.getIdade();
-        boolean saude = pessoa.getSaude();
-
-        if (idade >= 18 && saude == true) {
-            return true;
-        } else {
-            return false;
         }
     }
 

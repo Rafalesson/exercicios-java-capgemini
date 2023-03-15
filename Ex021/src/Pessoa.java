@@ -54,4 +54,12 @@ public class Pessoa {
         }
         this.saude = saude;
     }
+
+    public boolean verificarAptidao() {
+        if (this.idade >= 18 && this.saude) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
