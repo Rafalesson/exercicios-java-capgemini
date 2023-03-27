@@ -1,0 +1,1 @@
+## Escreva um algoritmo que leia três valores inteiros distintos e os escreva em ordem crescente;
